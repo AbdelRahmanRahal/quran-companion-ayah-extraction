@@ -28,7 +28,6 @@ def load_font(path: Path | str) -> str | None:
 		return None
 
 	fid = QFontDatabase.addApplicationFont(path_str)
-	print(f"Loading font: {path_str} -> ID: {fid}")
 	if fid < 0:
 		return None
 
