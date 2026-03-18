@@ -8,5 +8,15 @@ dependencies = [
     "pyside6>=6.10.2",
 ]
 
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+]
+
 [tool.ruff.format]
 indent-style = "tab"
+
+[tool.mypy]
+python_version = "3.14"
+no_implicit_optional = true
+strict = true
