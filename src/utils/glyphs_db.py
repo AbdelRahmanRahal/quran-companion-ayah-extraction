@@ -80,5 +80,7 @@ class GlyphsDB:
 		row = cur.fetchone()
 		return row["m"] if row and row["m"] else 1
 
-	def close(self):
-		self._conn.close()
+	def close(self) -> None:
+		"""Closes the database connection."""
+		if self._conn:
+			self._conn.close()
